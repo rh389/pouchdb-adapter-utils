@@ -90,7 +90,8 @@ function parseDoc(doc, newEdits) {
     if (!doc._id) {
       doc._id = uuid();
     }
-    newRevId = rev();
+    newRevId = doc.__newRevHash || rev();
+    delete doc.__newRevHash;
     if (doc._rev) {
       revInfo = parseRevisionInfo(doc._rev);
       if (revInfo.error) {
