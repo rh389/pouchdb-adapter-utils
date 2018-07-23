@@ -2,9 +2,16 @@
   "name": "pouchdb-adapter-utils",
   "version": "6.4.1",
   "description": "Utilities for PouchDB adapters.",
-  "main": "./src/index.js",
+  "scripts": {
+    "build": "babel src -d lib"
+  },
+  "main": "./lib/index.js",
   "keywords": [],
   "author": "Dale Harvey <dale@arandomurl.com>",
   "license": "Apache-2.0",
-  "repository": "https://github.com/pouchdb/pouchdb"
+  "repository": "https://github.com/pouchdb/pouchdb",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
 }
